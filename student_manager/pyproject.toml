@@ -1,0 +1,22 @@
+[project]
+name = "Projet-student-manager"
+version = "0.1.0"
+description = "Projet de Python appliqué au développement par : Raphaël Nabi, Thierno Diallo"
+authors = [
+    {name = "Raphaël Nabi",email = "raphae.nabi@efrei.net"},
+    {name = "Thierno Diallo",email = "thierno.diallo@efrei.net"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "student_manager", from = "src"}]
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
