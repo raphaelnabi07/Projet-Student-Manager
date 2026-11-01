@@ -1,7 +1,7 @@
 import pytest
 
-from student_manager_az.database import get_connection
-from student_manager_az.students import (
+from student_manager.src.database import get_connection
+from student_manager.src.students import (
     get_students,
     add_student,
     delete_student,
@@ -20,7 +20,7 @@ def setup_database(tmp_path, monkeypatch):
         return sqlite3.connect(database_file)
 
     monkeypatch.setattr(
-        "student_manager_az.students.get_connection",
+        "student_manager.src.students.get_connection",
         get_test_connection,
     )
 
@@ -49,15 +49,16 @@ def test_add_student(setup_database):
 
 def test_get_students(setup_database):
     # À compléter :  vérifier la récupération de la liste des étudiants.
-
+    pass
 
 def test_delete_student(setup_database):
     # À compléter : vérifier la suppression d’un étudiant.
-
+    pass
 
 def test_search_students(setup_database):
     # À compléter : vérifier la recherche d’étudiants à partir d’un nom ou d'un prénom.
-
+    pass
 
 def test_search_students_no_result(setup_database):
     # À compléter : vérifier le comportement de la recherche lorsqu’aucun étudiant ne correspond au critère indiqué.
+    pass

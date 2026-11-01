@@ -2,7 +2,7 @@ import sqlite3
 
 import pytest
 
-from student_manager_az import database
+from student_manager.src import database
 
 
 @pytest.fixture

@@ -20,16 +20,18 @@ def get_students():
 def add_student(first_name, last_name, email, class_name):
     """
     Ajoute un nouvel étudiant dans la base de données.
+    Retourne l'id du nouvel étudiant.
     """
     with get_connection() as connection:
-        connection.execute(
+        cursor = connection.execute(
             """
             INSERT INTO students (first_name, last_name, email, class_name)
             VALUES (?, ?, ?, ?)
             """,
-            (first_name, last_name, email, class_name)
+            (first_name, last_name, email, class_name),
         )
         connection.commit()
+        return cursor.lastrowid
 
 
 def delete_student(student_id):

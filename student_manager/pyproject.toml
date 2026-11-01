@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [tool.poetry]
-packages = [{include = "student_manager", from = "src"}]
+package-mode = false
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.0.0"
